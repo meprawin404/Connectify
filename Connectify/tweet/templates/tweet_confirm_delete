@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mt-4" >Are you sure you want to delete</h1>
+    <form method='post' class='form'>
+        {% csrf_token %}
+        <button class="btn btn-danger">Delete</button>
+        <a href="{% url 'tweet_list' %}" class="btn btn-success">Canle</a>
+    </form>
+{% endblock %}
